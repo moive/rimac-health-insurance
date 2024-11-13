@@ -1,0 +1,28 @@
+@use "variables" as *;
+
+@mixin Raleway($name: regular) {
+	@if map-has-key($RalewaySans, $name) {
+		font-family: "Raleway", sans-serif;
+		font-weight: #{map-get($RalewaySans, $name)};
+		font-optical-sizing: auto;
+		font-style: normal;
+	} @else {
+		@error "That font does not exist.";
+	}
+}
+
+@mixin blackRimac() {
+	color: $black-rimac;
+}
+@mixin grayRimac() {
+	color: $gray-rimac;
+}
+@mixin redRimac() {
+	color: $red-rimac;
+}
+@mixin blueRimac() {
+	color: $blue-rimac;
+}
+@mixin blackHome() {
+	color: $black-home;
+}
