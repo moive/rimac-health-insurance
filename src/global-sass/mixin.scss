@@ -26,3 +26,19 @@
 @mixin blackHome() {
 	color: $black-home;
 }
+
+@mixin bgBlackRimac() {
+	background-color: $black-rimac;
+}
+@mixin bgGrayRimac() {
+	background-color: $gray-rimac;
+}
+@mixin bgRedRimac() {
+	background-color: $red-rimac;
+}
+@mixin bgBlueRimac() {
+	background-color: $blue-rimac;
+}
+@mixin bgBlackHome() {
+	background-color: $black-home;
+}

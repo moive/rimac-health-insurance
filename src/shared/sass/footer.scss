@@ -1,0 +1,20 @@
+footer {
+	display: flex;
+	justify-content: center;
+	width: 100%;
+	margin-top: auto;
+}
+.container-footer {
+	align-items: center;
+	display: flex;
+	justify-content: space-between;
+	padding: 32px 15px;
+	width: 100%;
+	max-width: 1120px;
+}
+@media (max-width: 992px) {
+	footer {
+		padding-left: 32px;
+		padding-right: 32px;
+	}
+}

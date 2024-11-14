@@ -1,0 +1,21 @@
+// @import "../../global-sass/mixin.scss";
+// @use "../../global-sass/mixin.scss" as *;
+header {
+	display: flex;
+	justify-content: center;
+	width: 100%;
+}
+.container-header {
+	display: flex;
+	justify-content: space-between;
+	padding: 14px 15px;
+	width: 100%;
+	max-width: 1120px;
+}
+
+@media (max-width: 1023px) {
+	header {
+		padding-left: 32px;
+		padding-right: 32px;
+	}
+}
