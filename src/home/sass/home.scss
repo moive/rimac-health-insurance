@@ -1,0 +1,132 @@
+@use "../../global-sass/mixin.scss" as *;
+
+:root {
+	--bottom-gradient: 111px;
+}
+
+body {
+	.is-home {
+		@include brSonoma();
+		position: relative;
+	}
+}
+.is-home {
+	h2 {
+		@include brSonoma(bold);
+		font-size: 32px;
+		line-height: 40px;
+		margin-bottom: 8px;
+		margin-top: 16px;
+	}
+}
+.gradient-left {
+	background: url("./assets/gradient-left.png") no-repeat left bottom;
+	bottom: var(--bottom-gradient);
+	height: calc(100vh - var(--bottom-gradient));
+	left: 0;
+	max-width: 432px;
+	position: absolute;
+	width: 100%;
+	z-index: -1;
+}
+.gradient-right {
+	background: url("./assets/gradient-right.png") no-repeat right top;
+	top: 0;
+	height: calc(100vh - var(--bottom-gradient));
+	right: 0;
+	max-width: 432px;
+	position: absolute;
+	width: 100%;
+	z-index: -1;
+}
+.container-home {
+	padding: 0 15px;
+	display: flex;
+	width: 100%;
+	max-width: 1120px;
+}
+.big-image-left {
+	max-width: 480px;
+}
+.home-right {
+	max-width: 352px;
+	width: 100%;
+	margin-left: 128px;
+}
+.tag-promo {
+	background: linear-gradient(86.01deg, #00f4e2 0%, #00ff7f 100%);
+	border-radius: 4px;
+	display: inline-block;
+	padding: 2px 8px;
+}
+.description-promo {
+	@include brSonoma(semibold);
+}
+.nro-dni {
+	.MuiFormLabel-root + div {
+		border-radius: 0 8px 8px 0;
+	}
+}
+.nro-phone {
+	.MuiFormLabel-root + div {
+		border-radius: 8px;
+	}
+}
+.nro-dni,
+.nro-phone {
+	fieldset {
+		legend {
+			span {
+				display: none;
+			}
+		}
+	}
+	// [class*=MuiOutlinedInput-input] {
+	// 	background-color: yellow;
+	// }
+	.css-113d811-MuiFormLabel-root-MuiInputLabel-root {
+		transform: translate(14px, 3px) scale(0.75);
+	}
+	.css-16wblaj-MuiInputBase-input-MuiOutlinedInput-input {
+		padding: 22px 14px 11px;
+	}
+	p.Mui-error {
+		margin-left: 0;
+	}
+}
+
+.type-doc {
+	max-width: 140px;
+	.type-doc-doc {
+		border-radius: 8px 0 0 8px;
+	}
+}
+.cus-form {
+	margin-top: 12px;
+	span {
+		font-size: 12px;
+	}
+	.MuiCheckbox-root {
+		padding: 4px;
+	}
+	.MuiFormControlLabel-root {
+		margin-left: -6px;
+	}
+	p {
+		margin-top: 0;
+	}
+	.MuiFormControl-root {
+		margin: 0 0 0;
+	}
+	p.Mui-error {
+		margin-left: 0;
+	}
+}
+.term-condition {
+	padding-top: 12px;
+	font-size: 12px;
+	@include brSonoma(semibold);
+	a {
+		text-decoration: underline;
+	}
+}

@@ -1,15 +1,19 @@
 import { RouterProvider } from "react-router-dom";
 import { router } from "./router/RouterNavigation";
+import { Provider } from "react-redux";
+import store from "./store";
 
 const App = () => {
 	return (
 		<>
-			<RouterProvider
-				router={router}
-				future={{
-					v7_startTransition: true,
-				}}
-			/>
+			<Provider store={store}>
+				<RouterProvider
+					router={router}
+					future={{
+						v7_startTransition: true,
+					}}
+				/>
+			</Provider>
 		</>
 	);
 };

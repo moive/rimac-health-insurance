@@ -1,0 +1,48 @@
+:root {
+	--br-sonoma-black: br-sonoma-black;
+}
+@font-face {
+	font-family: br-sonoma-black;
+	src: url("../fonts/br-sonoma/BRSonoma-Black.otf") format("opentype");
+	font-display: swap;
+}
+:root {
+	--br-sonoma-bold: br-sonoma-bold;
+}
+@font-face {
+	font-family: br-sonoma-bold;
+	src: url("../fonts/br-sonoma/BRSonoma-Bold.otf") format("opentype");
+	font-display: swap;
+}
+:root {
+	--br-sonoma-semibold: br-sonoma-semibold;
+}
+@font-face {
+	font-family: br-sonoma-semibold;
+	src: url("../fonts/br-sonoma/BRSonoma-SemiBold.otf") format("opentype");
+	font-display: swap;
+}
+:root {
+	--br-sonoma-light: br-sonoma-light;
+}
+@font-face {
+	font-family: br-sonoma-light;
+	src: url("../fonts/br-sonoma/BRSonoma-Light.otf") format("opentype");
+	font-display: swap;
+}
+:root {
+	--br-sonoma-medium: br-sonoma-medium;
+}
+@font-face {
+	font-family: br-sonoma-medium;
+	src: url("../fonts/br-sonoma/BRSonoma-Medium.otf") format("opentype");
+	font-display: swap;
+}
+:root {
+	--br-sonoma-regular: br-sonoma-regular;
+}
+@font-face {
+	font-family: br-sonoma-regular;
+	src: url("../fonts/br-sonoma/BRSonoma-Regular.otf") format("opentype");
+	font-display: swap;
+}

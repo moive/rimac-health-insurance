@@ -1,4 +1,19 @@
 @use "variables" as *;
+@use "fonts" as *;
+
+$icons: (
+	"eye": "\f112",
+	"start": "\f12e",
+	"stop": "\f12f",
+);
+
+@each $name, $glyph in $icons {
+	.icon-#{$name}:before {
+		display: inline-block;
+		font-family: "Icon Font";
+		content: $glyph;
+	}
+}
 
 @mixin Raleway($name: regular) {
 	@if map-has-key($RalewaySans, $name) {
@@ -6,6 +21,15 @@
 		font-weight: #{map-get($RalewaySans, $name)};
 		font-optical-sizing: auto;
 		font-style: normal;
+	} @else {
+		@error "That font does not exist.";
+	}
+}
+
+@mixin LatoSans($name: regular) {
+	@if map-has-key($latoSans, $name) {
+		font-family: "Lato", sans-serif;
+		font-weight: #{map-get($latoSans, $name)};
 	} @else {
 		@error "That font does not exist.";
 	}
@@ -41,4 +65,8 @@
 }
 @mixin bgBlackHome() {
 	background-color: $black-home;
+}
+
+@mixin brSonoma($type: regular) {
+	font-family: var(--br-sonoma-#{$type}), sans-serif;
 }
