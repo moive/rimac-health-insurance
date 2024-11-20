@@ -1,50 +1,30 @@
-# React + TypeScript + Vite
+# Seguro Salud Rimac
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Proyecto desarrollado con react, typescript y sass.
+El desarrollo del proyecto se realizó mediante módulos, tales como:
 
-Currently, two official plugins are available:
+- Home, vista principal.
+- Your-plan, plan de seguro.
+- Resumen, bienvenido.
+- Shared, genérico.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+Cada modulo con su repectivo componentes, servicios y vistas.
 
-## Expanding the ESLint configuration
+## Librerías
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+Se implementó [Material UI](https://mui.com/material-ui/getting-started/) en el proyecto por tema de diseño, especialmente en el formulario.
 
-- Configure the top-level `parserOptions` property like this:
+Redux, para intercomunicación de los components.
 
-```js
-export default tseslint.config({
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
-```
+## Server
 
-- Replace `tseslint.configs.recommended` to `tseslint.configs.recommendedTypeChecked` or `tseslint.configs.strictTypeChecked`
-- Optionally add `...tseslint.configs.stylisticTypeChecked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and update the config:
+- [Netlify](https://rimac-health-insurance.netlify.app/)
 
-```js
-// eslint.config.js
-import react from 'eslint-plugin-react'
+- [Github](https://github.com/moive/rimac-health-insurance)
 
-export default tseslint.config({
-  // Set the react version
-  settings: { react: { version: '18.3' } },
-  plugins: {
-    // Add the react plugin
-    react,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended rules
-    ...react.configs.recommended.rules,
-    ...react.configs['jsx-runtime'].rules,
-  },
-})
-```
+## Pasos para instalar y hacer funcionar el proyecto:
+
+- Clonar el proyecto `https://github.com/moive/rimac-health-insurance`
+- Instalar dependencias del proyecto: `npm i`
+- Hacer funcionar el proyecto en local: `npm run dev`
+- Comando para compilar el proyecto: `npm run build`
