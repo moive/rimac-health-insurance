@@ -22,7 +22,7 @@ body {
 .gradient-left {
 	background: url("./assets/gradient-left.png") no-repeat left bottom;
 	bottom: var(--bottom-gradient);
-	height: calc(100vh - var(--bottom-gradient));
+	height: calc(100% - var(--bottom-gradient));
 	left: 0;
 	max-width: 432px;
 	position: absolute;
@@ -32,7 +32,7 @@ body {
 .gradient-right {
 	background: url("./assets/gradient-right.png") no-repeat right top;
 	top: 0;
-	height: calc(100vh - var(--bottom-gradient));
+	height: calc(100% - var(--bottom-gradient));
 	right: 0;
 	max-width: 432px;
 	position: absolute;
@@ -64,8 +64,10 @@ body {
 	@include brSonoma(semibold);
 }
 .nro-dni {
-	.MuiFormLabel-root + div {
-		border-radius: 0 8px 8px 0;
+	.MuiFormLabel-root {
+		& + div {
+			border-radius: 0 8px 8px 0;
+		}
 	}
 }
 .nro-phone {
@@ -75,6 +77,14 @@ body {
 }
 .nro-dni,
 .nro-phone {
+	.Mui-focused .MuiOutlinedInput-notchedOutline {
+		border-color: black !important;
+	}
+	.MuiFormLabel-root {
+		&.Mui-focused {
+			@include blackRimac();
+		}
+	}
 	fieldset {
 		legend {
 			span {
@@ -98,6 +108,9 @@ body {
 
 .type-doc {
 	max-width: 140px;
+	.Mui-focused .MuiOutlinedInput-notchedOutline {
+		border-color: black !important;
+	}
 	.type-doc-doc {
 		border-radius: 8px 0 0 8px;
 	}

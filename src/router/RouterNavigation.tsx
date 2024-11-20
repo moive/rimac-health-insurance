@@ -1,6 +1,7 @@
 import { createBrowserRouter } from "react-router-dom";
 import { Home } from "../home/views/Home";
 import { YourPlan } from "../your-plan/views/YourPlan";
+import { Resumen } from "../resumen/views/Resumen";
 
 const fixFutureConfig = {
 	v7_relativeSplatPath: true,
@@ -19,6 +20,10 @@ export const router = createBrowserRouter(
 		{
 			path: "/your-plan",
 			element: <YourPlan />,
+		},
+		{
+			path: "/resumen",
+			element: <Resumen />,
 		},
 	],
 	{

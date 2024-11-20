@@ -4,8 +4,9 @@ import { IPlan } from "../../store/types";
 
 type Props = {
 	plan: IPlan;
+	fn: () => void;
 };
-export const PlanHealth = ({ plan }: Props) => {
+export const PlanHealth = ({ plan, fn }: Props) => {
 	const [isLoading, setIsLoading] = useState<boolean>(false);
 	return (
 		<article className="plan">
@@ -37,7 +38,7 @@ export const PlanHealth = ({ plan }: Props) => {
 				</ul>
 			</div>
 			<div className="plan-action">
-				<button className="btn" disabled={isLoading}>
+				<button className="btn" disabled={isLoading} onClick={fn}>
 					{isLoading ? (
 						<CircularProgress className="loading" color="inherit" />
 					) : (

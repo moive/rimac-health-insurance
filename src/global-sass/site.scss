@@ -61,7 +61,7 @@ main {
 	align-items: center;
 	&-text {
 		font-size: 12px;
-		@include Raleway(semibold);
+		@include brSonoma(semibold);
 	}
 }
 .by-calling {
@@ -71,7 +71,7 @@ main {
 	font-size: 15px;
 	margin-left: 25px;
 	text-decoration: none;
-	@include Raleway(bold);
+	@include brSonoma(bold);
 }
 .is-mobile {
 	display: none;

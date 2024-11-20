@@ -49,8 +49,8 @@ export const HomeRight = () => {
 		defaultValues: {
 			documentNumber: "",
 			phone: "",
-			acceptPrivacy: false,
-			acceptTermCommercial: false,
+			acceptPrivacy: true,
+			acceptTermCommercial: true,
 		},
 	});
 
@@ -73,7 +73,7 @@ export const HomeRight = () => {
 			acceptPrivacy: data.acceptPrivacy,
 			acceptTermCommercial: data.acceptTermCommercial,
 		};
-		console.log(user);
+		// console.log(user);
 		dispatch(addUser(user));
 
 		const apiPlans = await getPlans();

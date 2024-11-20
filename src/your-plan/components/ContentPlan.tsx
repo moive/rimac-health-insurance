@@ -2,7 +2,7 @@ import { useAppSelector } from "../../hooks/redux";
 import { CheckCircle } from "@mui/icons-material";
 import { FormControlLabel, Radio, RadioGroup } from "@mui/material";
 import { useEffect, useState } from "react";
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { PlanHealth } from "./PlanHealth";
 import { IPlan, IUser } from "../../store/types";
 import { getAge } from "../../shared/utils/getAge";
@@ -27,15 +27,14 @@ const itemsPlanSelector = [
 ];
 
 export const ContentPlan = () => {
-	// const navigate = useNavigate();
-	const user = JSON.parse(localStorage.getItem("user") as string);
+	const navigate = useNavigate();
+	const user = JSON.parse(localStorage.getItem("user")!) as IUser;
 	const state = useAppSelector((state) => state);
 	const { list } = state.plans;
 	const [plans, setPlans] = useState<IPlan[]>([]);
 	const [valueSelected, setValueSelected] = useState("");
 
-	const data = JSON.parse(localStorage.getItem("user")!) as IUser;
-	const ageUserCurrent = getAge(data.birthDay);
+	const ageUserCurrent = getAge(user.birthDay);
 	// console.log(ageCurrent);
 	// useEffect(() => {
 	// 	if (!user) {
@@ -54,13 +53,18 @@ export const ContentPlan = () => {
 		}
 	}, [valueSelected]);
 
+	const choosePlan = (plan: IPlan) => {
+		localStorage.setItem("plan", JSON.stringify(plan));
+		navigate("/resumen");
+	};
+
 	return (
 		<>
 			<div className="back">
-				<a href="/">
+				<Link to="/">
 					<img src="/assets/icon-back.svg" alt="icon-back" />{" "}
 					<span>Volver</span>
-				</a>
+				</Link>
 			</div>
 			<div className="wrapper-content-plan">
 				<section className="text-content-plan">
@@ -101,7 +105,11 @@ export const ContentPlan = () => {
 				{plans.length > 0 && (
 					<div className="wrapper-plans">
 						{plans?.map((plan) => (
-							<PlanHealth plan={plan} key={plan.name} />
+							<PlanHealth
+								plan={plan}
+								fn={() => choosePlan(plan)}
+								key={plan.name}
+							/>
 						))}
 					</div>
 				)}

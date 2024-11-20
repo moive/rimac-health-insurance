@@ -7,7 +7,6 @@ export const Home = () => {
 	const [isHome, setIsHome] = useState(false);
 
 	useEffect(() => {
-		console.log(22);
 		if (window.location.pathname === "/") {
 			setIsHome(true);
 		} else {

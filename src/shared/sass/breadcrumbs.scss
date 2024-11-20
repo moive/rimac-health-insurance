@@ -5,10 +5,11 @@
 	width: 100%;
 }
 .navbar {
-	padding: 16px;
-	margin: 0;
 	display: flex;
+	font-size: 16px;
 	justify-content: center;
+	margin: 0;
+	padding: 16px;
 	@include LatoSans();
 	&-item {
 		color: #a9afd9;
