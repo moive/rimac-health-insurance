@@ -20,7 +20,7 @@ body {
 	}
 }
 .gradient-left {
-	background: url("./assets/gradient-left.png") no-repeat left bottom;
+	background: url("/assets/gradient-left.png") no-repeat left bottom;
 	bottom: var(--bottom-gradient);
 	height: calc(100% - var(--bottom-gradient));
 	left: 0;
@@ -30,7 +30,7 @@ body {
 	z-index: -1;
 }
 .gradient-right {
-	background: url("./assets/gradient-right.png") no-repeat right top;
+	background: url("/assets/gradient-right.png") no-repeat right top;
 	top: 0;
 	height: calc(100% - var(--bottom-gradient));
 	right: 0;
