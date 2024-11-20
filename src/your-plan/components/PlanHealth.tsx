@@ -7,7 +7,7 @@ type Props = {
 	fn: () => void;
 };
 export const PlanHealth = ({ plan, fn }: Props) => {
-	const [isLoading, setIsLoading] = useState<boolean>(false);
+	const [isLoading] = useState<boolean>(false);
 	return (
 		<article className="plan">
 			<div className="plan-header">

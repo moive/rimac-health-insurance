@@ -9,7 +9,6 @@ export const plansSlice = createSlice({
 	reducers: {
 		addPlans: (state, action: PayloadAction<IPlan[]>) => {
 			state.list = action.payload;
-			console.log(state.list);
 		},
 
 		clearPlans: (state) => {

@@ -74,7 +74,7 @@ export const ContentPlan = () => {
 				<div className="wrapper-plan-selected">
 					<RadioGroup
 						name="radio-buttons-group"
-						onChange={(e, val) => setValueSelected(val)}
+						onChange={(_e, val) => setValueSelected(val)}
 					>
 						{itemsPlanSelector.map((item) => (
 							<FormControlLabel
