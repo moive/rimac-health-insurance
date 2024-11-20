@@ -12,3 +12,13 @@ export interface IUser {
 	acceptPrivacy: boolean;
 	acceptTermCommercial: boolean;
 }
+
+export interface PlansState {
+	list?: IPlan[];
+}
+export interface IPlan {
+	name: string;
+	price: number;
+	description: [string];
+	age: number;
+}

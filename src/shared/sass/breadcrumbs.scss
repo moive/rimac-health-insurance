@@ -1,0 +1,44 @@
+@use "../../global-sass/mixin.scss" as *;
+
+.wrapper-breadcrumbs {
+	background: rgba(237, 239, 252, 1);
+	width: 100%;
+}
+.navbar {
+	padding: 16px;
+	margin: 0;
+	display: flex;
+	justify-content: center;
+	@include LatoSans();
+	&-item {
+		color: #a9afd9;
+		display: flex;
+		&.active {
+			color: #494f66;
+			.navbar-item-text {
+				@include LatoSans(bold);
+			}
+			.navbar-item-number {
+				background: #6f7dff;
+				color: white;
+			}
+		}
+		&-text {
+			padding-left: 16px;
+		}
+		&-number {
+			@include LatoSans(bold);
+			font-size: 12px;
+			height: 24px;
+			width: 24px;
+			border: 1px solid #c5cbe0;
+			border-radius: 50%;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+		}
+	}
+}
+.line-progress {
+	margin: 0 16px;
+}

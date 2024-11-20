@@ -18,6 +18,8 @@ import { IUser } from "../../store/types";
 import { useAppDispatch } from "../../hooks/redux";
 import { addUser } from "../../store/userSlice";
 import { FormHelperText } from "@mui/material";
+import { getPlans } from "../services/getPlans";
+import { addPlans } from "../../store/plansSlice";
 
 type FormValues = {
 	documentNumber: string;
@@ -35,10 +37,6 @@ export const HomeRight = () => {
 		setTypeDoc(event.target.value as string);
 	};
 
-	// const handleChangecheck = (event: boolean) => {
-	// 	setisDisabled(!event);
-	// };
-
 	const dispatch = useAppDispatch();
 
 	const {
@@ -51,8 +49,8 @@ export const HomeRight = () => {
 		defaultValues: {
 			documentNumber: "",
 			phone: "",
-			acceptPrivacy: true,
-			acceptTermCommercial: true,
+			acceptPrivacy: false,
+			acceptTermCommercial: false,
 		},
 	});
 
@@ -77,6 +75,10 @@ export const HomeRight = () => {
 		};
 		console.log(user);
 		dispatch(addUser(user));
+
+		const apiPlans = await getPlans();
+		dispatch(addPlans(apiPlans.list));
+
 		navigate("your-plan");
 		setIsLoading(false);
 	};

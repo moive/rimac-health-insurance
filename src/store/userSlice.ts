@@ -1,4 +1,3 @@
-/* eslint-disable no-mixed-spaces-and-tabs */
 import { createSlice, PayloadAction } from "@reduxjs/toolkit";
 import { IUser, UserState } from "./types";
 

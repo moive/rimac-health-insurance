@@ -48,11 +48,13 @@ main {
 	display: flex;
 	flex-direction: column;
 	min-height: 100vh;
-	align-items: center;
 }
 .main-container {
 	display: flex;
+	margin: 0 auto;
+	max-width: 1120px;
 	min-height: 100vh;
+	width: 100%;
 }
 .purchase {
 	display: flex;
@@ -131,6 +133,20 @@ main {
 	&:disabled {
 		background-color: #494f66;
 		cursor: not-allowed;
+	}
+}
+
+.back {
+	@include LatoSans(bold);
+	font-size: 18px;
+	padding: 40px 0 56px 96px;
+	a {
+		@include blueRimac();
+		display: inline-flex;
+		align-items: center;
+		img {
+			padding-right: 8px;
+		}
 	}
 }
 
