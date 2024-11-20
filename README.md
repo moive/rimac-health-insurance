@@ -18,9 +18,9 @@ Redux, para intercomunicación de los components.
 
 ## Server
 
-- [Netlify](https://rimac-health-insurance.netlify.app/)
+- [Netlify](https://rimac-health-insurance.netlify.app/) donde se encuentra desplegado el proyecto.
 
-- [Github](https://github.com/moive/rimac-health-insurance)
+- [Github](https://github.com/moive/rimac-health-insurance) repositorio del proyecto.
 
 ## Pasos para instalar y hacer funcionar el proyecto:
 
@@ -28,3 +28,7 @@ Redux, para intercomunicación de los components.
 - Instalar dependencias del proyecto: `npm i`
 - Hacer funcionar el proyecto en local: `npm run dev`
 - Comando para compilar el proyecto: `npm run build`
+
+## Recursos no incluidos en en este proyecto
+
+- Pruebas unitarias
