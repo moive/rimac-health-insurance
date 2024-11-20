@@ -147,6 +147,14 @@ body {
 		text-decoration: underline;
 	}
 }
+@media (max-width: 1023px) {
+	.gradient-left {
+		background-position: -140px bottom;
+	}
+	.gradient-right {
+		background-position: 100px top;
+	}
+}
 
 @media (max-width: 615px) {
 	.image-mobile {
@@ -159,11 +167,5 @@ body {
 		display: flex;
 		margin-bottom: 24px;
 		padding-bottom: 24px;
-	}
-	.gradient-left {
-		background-position: -140px bottom;
-	}
-	.gradient-right {
-		background-position: 150px top;
 	}
 }
