@@ -54,6 +54,9 @@ body {
 	width: 100%;
 	margin-left: 128px;
 }
+.image-mobile {
+	display: none;
+}
 .tag-promo {
 	background: linear-gradient(86.01deg, #00f4e2 0%, #00ff7f 100%);
 	border-radius: 4px;
@@ -142,5 +145,27 @@ body {
 	@include brSonoma(semibold);
 	a {
 		text-decoration: underline;
+	}
+}
+
+@media (max-width: 615px) {
+	.image-mobile {
+		max-width: 136px;
+		display: inline-block;
+		padding-left: 12px;
+	}
+	.group-top {
+		border-bottom: 1px solid #ccd1ee;
+		display: flex;
+		margin-bottom: 24px;
+		padding-bottom: 24px;
+	}
+}
+@media (max-width: 450px) {
+	.gradient-left {
+		background-position: -80px bottom;
+	}
+	.gradient-right {
+		background-position: 100px top;
 	}
 }

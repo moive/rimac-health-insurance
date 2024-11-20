@@ -44,6 +44,9 @@ a {
 		text-decoration: underline;
 	}
 }
+img {
+	max-width: 100%;
+}
 main {
 	display: flex;
 	flex-direction: column;
@@ -77,6 +80,9 @@ main {
 	display: none;
 }
 .is-home {
+	.container-home {
+		padding-top: 32px;
+	}
 	.btn {
 		@include bgBlackHome();
 		@include brSonoma(bold);
@@ -157,20 +163,54 @@ main {
 	.is-desktop {
 		display: none;
 	}
+	.home-right {
+		margin-left: 8%;
+	}
+	.back {
+		padding-left: 15px;
+	}
 }
 .upper {
 	text-transform: uppercase;
 }
 
 @media (max-width: 615px) {
-	.text-change {
-		color: inherit;
+	h2 {
+		font-size: 32px;
 	}
-	.main-container {
+	.home-left {
+		display: none;
+	}
+	.home-right {
+		margin-left: 0;
+	}
+	.is-home {
+		.container-home {
+			justify-content: center;
+		}
+		.btn {
+			max-width: 100%;
+			padding: 15px;
+		}
+	}
+	.purchase-text {
+		display: none;
+	}
+	.container-footer {
 		flex-direction: column;
+		figure {
+			padding-bottom: 24px;
+			border-bottom: 1px solid white;
+			width: 100%;
+			text-align: center;
+		}
+		> span {
+			text-align: center;
+			padding-top: 24px;
+			width: 100%;
+		}
 	}
-
-	footer {
-		margin-top: 0;
+	.back {
+		display: none;
 	}
 }

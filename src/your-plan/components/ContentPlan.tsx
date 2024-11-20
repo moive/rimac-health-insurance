@@ -93,8 +93,10 @@ export const ContentPlan = () => {
 								}
 								label={
 									<div className="plan-select" key={item.id}>
-										<img src={item.icon} alt={item.name} />
-										<div className="plan-select-title">{item.title}</div>
+										<div className="group-top-plan-selected">
+											<img src={item.icon} alt={item.name} />
+											<div className="plan-select-title">{item.title}</div>
+										</div>
 										<p>{item.description}</p>
 									</div>
 								}

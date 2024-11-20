@@ -49,8 +49,8 @@ export const HomeRight = () => {
 		defaultValues: {
 			documentNumber: "",
 			phone: "",
-			acceptPrivacy: true,
-			acceptTermCommercial: true,
+			acceptPrivacy: false,
+			acceptTermCommercial: false,
 		},
 	});
 
@@ -98,8 +98,15 @@ export const HomeRight = () => {
 
 	return (
 		<section className="home-right">
-			<div className="tag-promo">Seguro Salud Flexible</div>
-			<h2>Creado para ti y tu familia</h2>
+			<div className="group-top">
+				<div className="info-top">
+					<div className="tag-promo">Seguro Salud Flexible</div>
+					<h2>Creado para ti y tu familia</h2>
+				</div>
+				<figure className="image-mobile">
+					<img src="/assets/family.png" alt="family" />
+				</figure>
+			</div>
 			<p className="description-promo">
 				Tú eliges cuánto pagar. Ingresa tus datos, cotiza y recibe nuestra
 				asesoría. 100% online.

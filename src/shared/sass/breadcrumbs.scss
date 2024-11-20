@@ -43,3 +43,52 @@
 .line-progress {
 	margin: 0 16px;
 }
+.steps-mobile {
+	background: #fafbff;
+	border-bottom: 1px solid #fafbff;
+	display: none;
+	@include LatoSans(black);
+	font-size: 10px;
+	padding: 0 15px 24px;
+	align-items: center;
+	span,
+	a {
+		flex: none;
+		display: inline-flex;
+		align-items: center;
+		text-transform: uppercase;
+		@include blackRimac();
+		img {
+			padding-right: 12px;
+		}
+	}
+}
+.slash {
+	background: #d7dbf5;
+	border-radius: 3px;
+	height: 6px;
+	margin-left: 16px;
+	max-width: 200px;
+	position: relative;
+	width: 100%;
+	&::after {
+		background: #6464fa;
+		border-radius: 3px;
+		content: "";
+		height: 6px;
+		position: absolute;
+		width: 50%;
+	}
+}
+
+@media (max-width: 615px) {
+	.steps-mobile {
+		padding-top: 2px;
+		display: flex;
+		padding-bottom: 16px;
+	}
+	.wrapper-breadcrumbs,
+	.resumen-breadcrumbs {
+		display: none;
+	}
+}

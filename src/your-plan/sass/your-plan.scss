@@ -127,3 +127,38 @@
 		}
 	}
 }
+@media (max-width: 615px) {
+	.wrapper-content-plan {
+		align-items: start;
+		padding-top: 32px;
+		overflow: hidden;
+	}
+	.text-content-plan {
+		font-size: 16px;
+	}
+	.wrapper-plan-selected .MuiFormControlLabel-labelPlacementEnd,
+	.plan-select {
+		max-width: 100%;
+		width: 100%;
+		.MuiFormControlLabel-label {
+			width: 100%;
+		}
+	}
+	.group-top-plan-selected {
+		display: flex;
+		align-items: center;
+	}
+	.plan-select-title {
+		padding-left: 8px;
+	}
+	.plan {
+		min-width: 288px;
+	}
+	.wrapper-plans {
+		flex-wrap: nowrap;
+		justify-content: flex-start;
+		overflow-x: auto;
+		padding-top: 32px;
+		width: 100%;
+	}
+}

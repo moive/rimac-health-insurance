@@ -12,8 +12,7 @@ const Header = () => {
 					<span className="purchase-text">¡Compra por este medio!</span>
 					<a href="tel:(01) 411 6001" className="by-calling">
 						<img src="/assets/icon-telephone-black.svg" alt="icon-telephone" />
-						<span className="is-desktop">(01) 411 6001</span>
-						<span className="is-mobile">Llámanos</span>
+						<span>(01) 411 6001</span>
 					</a>
 				</div>
 			</div>
